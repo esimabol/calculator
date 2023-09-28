@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+header, nav, section, main, figure, figcaption, article, aside, footer, hgroup {
+    display: block;
+}
+
+body {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    /* linear-gradient(45deg,#92F1D5,#ABF6BD); */
+    
+   
+}
+
+.wrapper {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255,255,255,0.75);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35,35,35,0.1);
+    color:#232323;
+    backdrop-filter: blur(4px);
+    background: rgba(255,255,255,0.30);
+    border:1px solid rgba(255, 255, 255, 0.34);
+    flex-basis: 400px;
+    height: 600px;
+    padding: 20px 35px;
+    position: relative;
+
+}
+
+.header {
+    margin-bottom: 10px;
+}
+
+
+.screen {
+    font-family: 'Tomorrow', sans-serif;
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(255, 255, 255, 0.01);
+    border-radius:16px;
+    box-shadow: 0 4px 30px rgba(35,35,35,0.1);
+    color:#232323;
+    font-size:35px;
+    overflow: auto;
+    padding: 20px;
+    text-align: right;
+    width: 326px;
+}
+
+.calc-button-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 0;
+}
+.calc-button {
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    background: rgba(255,255,255,0.75);
+    border:1px solid rgba(255, 255, 255, 0.01);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(35,35,35,0.1);
+    color: #232323;
+    flex-basis: 20%;
+    font-size:24px;
+    height: 65px;
+    position: relative;
+}
+
+.calc-button:last-child {
+    background-color: #ad2424;
+     /* #496469; */   
+    color:#fff;
+    
+}
+.calc-button:hover {
+    top:2px;
+}
+
+.double {
+    flex-basis: 45%;
+}
+
+.triple {
+    flex-basis: 45%;
+}
+
+.aside {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+}
+
+.switch {
+position: relative;
+display: inline-block;
+width: 60px;
+height: 34px;
+}
+
+.switch input { 
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+input:checked + .slider {
+background-color: #2196F3;
+
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
